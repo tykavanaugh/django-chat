@@ -25,7 +25,7 @@ login_data = {
 urlpatterns = [
     url(r'^$', views.main, name='main'),
     url(r'^admin/', admin.site.urls),
-    url(r'^login/$', auth_views.login, login_data, name='login'),
+    url(r'^login/$', auth_views.LoginView, login_data, name='login'),
     url(r'^logout/$', auth_views.logout_then_login, name='logout'),
     url(r'^new_user/$', views.new_user, name='new_user'),
     url(r'^api/v1/', include('api.urls')),
